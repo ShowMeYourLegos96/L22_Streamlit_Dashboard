@@ -29,7 +29,7 @@ st.sidebar.header("🔧 Dashboard Controls")
 def fetch_coin_list():
     # Fetch list of all CoinGecko top-level endpoints (used for quick diagnostics)
     try:
-        url = "https://api.coingecko.com/api/v3"
+        url = "https://api.coingecko.com/api/v3/coins/list"
         response = requests.get(url, timeout=10)
         response.raise_for_status()
         return response.json()
